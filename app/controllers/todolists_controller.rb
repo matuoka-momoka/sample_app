@@ -33,6 +33,9 @@ class TodolistsController < ApplicationController
     redirect_to todolists_path  # 投稿一覧画面へリダイレクト
   end
 
+ def list
+   @list = List.find(params[:id])
+ end
 
   private
   def list_params
